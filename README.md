@@ -7,6 +7,7 @@ The purpose of this project is to analyze a data set about firearm
 purchases, and discovered a steady pattern. <br />
 
 **FILE EXPLANATIONS:** <br />
+* firearmsData.csv - data file <br />
 * CLINTON1998-2021.csv - data file <br />
 * BUSH2001-2009.csv - data file <br />
 * OBAMA2009-2017.csv - data file <br />
