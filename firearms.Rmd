@@ -18,16 +18,12 @@ sum(biden$totals)
 ```
 
 ```{r}
-#show purchase rate difference between Bush and Obama years
-
-```
-
-```{r}
+#estimating what the differences would be if the data set was complete
 sum(clinton$totals)*2 #Clinton was in office 1996-2001, data is 1998-2001 (missing two years, so multiplying to estimate 4 year term)
 sum(bush$totals)
 sum(obama$totals)/2 #dividing Obama's term by 2 so it estimates a 4 year term
 sum(trump$totals)
-sum(biden$totals)*2 #only been in office about two years, so multplying by two to estimate four year term
+sum(biden$totals)*2 #only been in office about two years, so multiplying by two to estimate four year term
 ```
 
 ```{r}
@@ -48,6 +44,7 @@ clinton2
 setkey(clinton2, "totals")
 head(clinton2)
 clinton2[.(max(clinton$totals))]
+#1999 CALIFORNIA 136278
 ```
 
 ```{r}
@@ -58,6 +55,7 @@ bush2
 setkey(bush2, "totals")
 head(bush2)
 bush2[.(max(bush$totals))]
+#2008 KENTUCKY 184555
 ```
 
 ```{r}
@@ -68,6 +66,7 @@ obama2
 setkey(obama2, "totals")
 head(obama2)
 obama2[.(max(obama$totals))]
+#2014 NORTH CAROLINA 541978
 ```
 
 ```{r}
@@ -78,6 +77,7 @@ trump2
 setkey(trump2, "totals")
 head(trump2)
 trump2[.(max(trump$totals))]
+#2020 ILLINOIS 612411
 ```
 
 ```{r}
@@ -88,4 +88,17 @@ biden2
 setkey(biden2, "totals")
 head(biden2)
 biden2[.(max(biden$totals))]
+#2021 ILLINOIS 1427917
+```
+
+```{r}
+diff1 <- sum(bush$totals)-sum(clinton$totals)*2
+print("----DIFFERENCE BW BUSH & CLINTON----")
+diff1
+diff2 <- sum(trump$totals)-sum(obama$totals)/2
+print("----DIFFERENCE BW TRUMP & OBAMA----")
+diff2
+diff3 <- sum(biden$totals)*2 - sum(trump$totals)
+print("----DIFFERENCE BW BIDEN & TRUMP----")
+diff3
 ```
