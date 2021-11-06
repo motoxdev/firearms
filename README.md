@@ -4,7 +4,7 @@ CS 510
 
 **PURPOSE:** <br />
 The purpose of this project is to analyze a data set about firearm
-purchases, and hopefully draw out some interesting conclusions. <br />
+purchases, and discovered a steady pattern. <br />
 
 **FILE EXPLANATIONS:** <br />
 * CLINTON1998-2021.csv - data file <br />
@@ -24,6 +24,7 @@ purchases, and hopefully draw out some interesting conclusions. <br />
 4. finding maximum entry for firearm sales during each presidency <br />
 5. locating the maximum entry to the coordinating month <br />
 6. finding the difference of firearm purchases between administrations <br />
+7. plotting the summations of each administration <br />
 
 **SOURCES/DATA SOURCES**<br />
 - https://github.com/BuzzFeedNews/nics-firearm-background-checks/

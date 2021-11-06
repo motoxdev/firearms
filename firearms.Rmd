@@ -20,15 +20,23 @@ sum(biden$totals)
 
 ```{r}
 #estimating what the differences would be if the data set was complete
-sum(clinton$totals)*2 #Clinton was in office 1996-2001, data is 1998-2001 (missing two years, so multiplying to estimate 4 year term)
-sum(bush$totals)
-sum(obama$totals)/2 #dividing Obama's term by 2 so it estimates a 4 year term
-sum(trump$totals)
-sum(biden$totals)*2 #only been in office about two years, so multiplying by two to estimate four year term
+#Clinton was in office 1996-2001, data is 1998-2001 (missing two years, so multiplying to estimate 4 year term)
+clintonSum <- sum(clinton$totals)*2 
+clintonSum
+bushSum <- sum(bush$totals)
+bushSum
+#dividing Obama's term by 2 so it estimates a 4 year term
+obamaSum <- sum(obama$totals)/2 
+obamaSum
+trumpSum <- sum(trump$totals)
+trumpSum
+#only been in office about two years, so multiplying by two to estimate four year term
+bidenSum <- sum(biden$totals)*2
+bidenSum
 ```
 
 ```{r}
-#finding max total value during each year 
+#finding max value of firearms sales during each year 
 max(clinton$totals)
 max(bush$totals)
 max(obama$totals)
@@ -95,6 +103,7 @@ biden2[.(max(biden$totals))]
 ```
 
 ```{r}
+#finding the differences between each of the administrations with averaged data
 diff1 <- sum(bush$totals)-sum(clinton$totals)*2
 print("----DIFFERENCE BW BUSH & CLINTON----")
 diff1
@@ -109,10 +118,18 @@ diff3
 ```{r}
 #install the following packages if not already done so
 #install.packages("tidyverse")
-#install.packages("ggfortify")
 #library(tidyverse)
-#ggplot(data = firearmsData, aes(x = month, y = totals)) +
-#  geom_line()
-
+#plotting summations of all firearm sales during the last five US administrations
+points <- c(clintonSum,bushSum,obamaSum,trumpSum,bidenSum)
+plot(points, 
+     xaxt = "n",
+     type = "o", 
+     col = "blue", 
+     xlab = "A - Clinton   B - Bush   C - Obama   D - Trump   E - Biden",
+     ylab = "Firearm Sales", 
+     main = "Firearm Sales from 1999-2021")
+axis(side = 1,
+     at = 1:5,
+     labels = LETTERS[1:5])
 
 ```
