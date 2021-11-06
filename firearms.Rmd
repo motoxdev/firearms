@@ -1,6 +1,7 @@
 
 ```{r}
 #reading in data spreadsheets
+firearmsData <- read.csv("firearmsData.csv")
 clinton <- read.csv("CLINTON1998-2001.csv")
 bush <- read.csv("BUSH2001-2009.csv")
 obama <- read.csv("OBAMA2009-2017.csv")
@@ -9,7 +10,7 @@ biden <- read.csv("BIDEN2020-2021.csv")
 ```
 
 ```{r}
-#finding the total sum of firearms for each presidential term
+#adding the "totals" column for each presidential term
 sum(clinton$totals)
 sum(bush$totals)
 sum(obama$totals)
@@ -27,7 +28,7 @@ sum(biden$totals)*2 #only been in office about two years, so multiplying by two 
 ```
 
 ```{r}
-#finding max total value during each year
+#finding max total value during each year 
 max(clinton$totals)
 max(bush$totals)
 max(obama$totals)
@@ -38,6 +39,8 @@ max(biden$totals)
 
 ```{r}
 #finding entry for max firearm sales during Clinton Administration
+#install data.table if haven't already done so
+#install.packages("data.table")
 library(data.table)
 clinton2 <- data.table(clinton)
 clinton2
@@ -101,4 +104,15 @@ diff2
 diff3 <- sum(biden$totals)*2 - sum(trump$totals)
 print("----DIFFERENCE BW BIDEN & TRUMP----")
 diff3
+```
+
+```{r}
+#install the following packages if not already done so
+#install.packages("tidyverse")
+#install.packages("ggfortify")
+#library(tidyverse)
+#ggplot(data = firearmsData, aes(x = month, y = totals)) +
+#  geom_line()
+
+
 ```
