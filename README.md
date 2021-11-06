@@ -19,7 +19,8 @@ purchases, and hopefully draw out some interesting conclusions. <br />
 
 **CODE ORGANIZATION/PROCESS:**<br />
 1. reading in all the data sheets (one for each presidential term) <br />
-2. adding the totals of all firearm purchases for each presidential term
-3. adjusting data in order to represent 4-year terms
-4. finding maximum entry for firearm sales during each presidency
-5. locating the maximum entry to the coordinating month
+2. adding the totals of all firearm purchases for each presidential term <br />
+3. adjusting data in order to represent 4-year terms <br />
+4. finding maximum entry for firearm sales during each presidency <br />
+5. locating the maximum entry to the coordinating month <br />
+6. finding the difference of firearm purchases between administrations <br />
