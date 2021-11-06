@@ -24,3 +24,6 @@ purchases, and hopefully draw out some interesting conclusions. <br />
 4. finding maximum entry for firearm sales during each presidency <br />
 5. locating the maximum entry to the coordinating month <br />
 6. finding the difference of firearm purchases between administrations <br />
+
+**SOURCES/DATA SOURCES**<br />
+- https://github.com/BuzzFeedNews/nics-firearm-background-checks/
