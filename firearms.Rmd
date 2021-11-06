@@ -1,0 +1,96 @@
+
+
+```{r}
+#reading in data spreadsheets
+clinton <- read.csv("CLINTON1998-2001.csv")
+bush <- read.csv("BUSH2001-2009.csv")
+obama <- read.csv("OBAMA2009-2017.csv")
+trump <- read.csv("TRUMP2017-2020.csv")
+biden <- read.csv("BIDEN2020-2021.csv")
+```
+
+```{r}
+#finding the total sum of firearms for each presidential term
+sum(clinton$totals)
+sum(bush$totals)
+sum(obama$totals)
+sum(trump$totals)
+sum(biden$totals)
+```
+```{r}
+#show purchase rate difference between Bush and Obama years
+
+```
+
+
+
+
+```{r}
+#dividing Obama's term by 2 (so it is equal to other 4 year term presidents)
+#assuming the purchase rate continues, multiplying Biden's term by 2 to represent the next two years
+sum(clinton$totals)*2 #clinton was in office 1996-2001, data is 1998-2001 (missing two years, so multiplying to estimate 4 year term)
+sum(bush$totals)
+sum(obama$totals)/2 #dividing Obama's term by 2 so it estimates a 4 year term
+sum(trump$totals)
+sum(biden$totals)*2 #only been in office about two years, so multplying by two to estimate four year term
+```
+
+```{r}
+#finding max total value during each year
+max(clinton$totals)
+max(bush$totals)
+max(obama$totals)
+max(trump$totals)
+max(biden$totals)
+```
+
+
+```{r}
+#finding entry for max firearm sales during Clinton Administration
+library(data.table)
+clinton2 <- data.table(clinton)
+clinton2
+setkey(clinton2, "totals")
+head(clinton2)
+clinton2[.(max(clinton$totals))]
+```
+
+```{r}
+#finding entry for max firearm sales during Bush Administration
+library(data.table)
+bush2 <- data.table(bush)
+bush2
+setkey(bush2, "totals")
+head(bush2)
+bush2[.(max(bush$totals))]
+```
+
+```{r}
+#finding entry for max firearm sales during Obama Administration
+library(data.table)
+obama2 <- data.table(obama)
+obama2
+setkey(obama2, "totals")
+head(obama2)
+obama2[.(max(obama$totals))]
+```
+
+```{r}
+#finding entry for max firearm sales during Trump Administration
+library(data.table)
+trump2 <- data.table(trump)
+trump2
+setkey(trump2, "totals")
+head(trump2)
+trump2[.(max(trump$totals))]
+```
+
+```{r}
+#finding entry for max firearm sales during Biden Administration
+library(data.table)
+biden2 <- data.table(biden)
+biden2
+setkey(biden2, "totals")
+head(biden2)
+biden2[.(max(biden$totals))]
+```
