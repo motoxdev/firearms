@@ -1,5 +1,4 @@
 
-
 ```{r}
 #reading in data spreadsheets
 clinton <- read.csv("CLINTON1998-2001.csv")
@@ -17,18 +16,14 @@ sum(obama$totals)
 sum(trump$totals)
 sum(biden$totals)
 ```
+
 ```{r}
 #show purchase rate difference between Bush and Obama years
 
 ```
 
-
-
-
 ```{r}
-#dividing Obama's term by 2 (so it is equal to other 4 year term presidents)
-#assuming the purchase rate continues, multiplying Biden's term by 2 to represent the next two years
-sum(clinton$totals)*2 #clinton was in office 1996-2001, data is 1998-2001 (missing two years, so multiplying to estimate 4 year term)
+sum(clinton$totals)*2 #Clinton was in office 1996-2001, data is 1998-2001 (missing two years, so multiplying to estimate 4 year term)
 sum(bush$totals)
 sum(obama$totals)/2 #dividing Obama's term by 2 so it estimates a 4 year term
 sum(trump$totals)
