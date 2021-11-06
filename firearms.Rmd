@@ -1,3 +1,7 @@
+Devyn Holland 
+CS 510
+Midterm Code Assignment
+
 
 ```{r}
 #reading in data spreadsheets

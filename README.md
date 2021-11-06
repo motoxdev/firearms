@@ -4,7 +4,8 @@ CS 510
 
 **PURPOSE:** <br />
 The purpose of this project is to analyze a data set about firearm
-purchases, and discovered a steady pattern. <br />
+purchases, and discovered a steady pattern between administrations and the rise
+in firearm purchases. <br />
 
 **FILE EXPLANATIONS:** <br />
 * firearmsData.csv - data file <br />
