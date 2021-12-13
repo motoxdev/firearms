@@ -1,6 +1,5 @@
 Devyn Holland 
 CS 510
-Midterm Code Assignment
 
 
 ```{r Reading Spreadsheets}
