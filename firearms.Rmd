@@ -3,7 +3,7 @@ CS 510
 Midterm Code Assignment
 
 
-```{r}
+```{r Reading Spreadsheets}
 #reading in data spreadsheets
 firearmsData <- read.csv("firearmsData.csv")
 clinton <- read.csv("CLINTON1998-2001.csv")
@@ -13,7 +13,7 @@ trump <- read.csv("TRUMP2017-2020.csv")
 biden <- read.csv("BIDEN2020-2021.csv")
 ```
 
-```{r}
+```{r Totals Summation}
 #adding the "totals" column for each presidential term
 sum(clinton$totals)
 sum(bush$totals)
@@ -22,7 +22,7 @@ sum(trump$totals)
 sum(biden$totals)
 ```
 
-```{r}
+```{r Averaging Data for Proper Analysis}
 #estimating what the differences would be if the data set was complete
 #Clinton was in office 1996-2001, data is 1998-2001 (missing two years, so multiplying to estimate 4 year term)
 clintonSum <- sum(clinton$totals)*2 
@@ -39,7 +39,7 @@ bidenSum <- sum(biden$totals)*2
 bidenSum
 ```
 
-```{r}
+```{r Sale Maximums}
 #finding max value of firearms sales during each year 
 max(clinton$totals)
 max(bush$totals)
@@ -49,7 +49,7 @@ max(biden$totals)
 ```
 
 
-```{r}
+```{r Locating Clinton Maximums}
 #finding entry for max firearm sales during Clinton Administration
 #install data.table if haven't already done so
 #install.packages("data.table")
@@ -62,9 +62,8 @@ clinton2[.(max(clinton$totals))]
 #1999 CALIFORNIA 136278
 ```
 
-```{r}
+```{r Locating Bush Maximums}
 #finding entry for max firearm sales during Bush Administration
-library(data.table)
 bush2 <- data.table(bush)
 bush2
 setkey(bush2, "totals")
@@ -73,9 +72,8 @@ bush2[.(max(bush$totals))]
 #2008 KENTUCKY 184555
 ```
 
-```{r}
+```{r Locating Obama Maximums}
 #finding entry for max firearm sales during Obama Administration
-library(data.table)
 obama2 <- data.table(obama)
 obama2
 setkey(obama2, "totals")
@@ -84,9 +82,8 @@ obama2[.(max(obama$totals))]
 #2014 NORTH CAROLINA 541978
 ```
 
-```{r}
+```{r Locating Trump Maximums}
 #finding entry for max firearm sales during Trump Administration
-library(data.table)
 trump2 <- data.table(trump)
 trump2
 setkey(trump2, "totals")
@@ -95,9 +92,8 @@ trump2[.(max(trump$totals))]
 #2020 ILLINOIS 612411
 ```
 
-```{r}
+```{r Locating Biden Maximums}
 #finding entry for max firearm sales during Biden Administration
-library(data.table)
 biden2 <- data.table(biden)
 biden2
 setkey(biden2, "totals")
@@ -106,7 +102,7 @@ biden2[.(max(biden$totals))]
 #2021 ILLINOIS 1427917
 ```
 
-```{r}
+```{r Administration Total Sum Differences}
 #finding the differences between each of the administrations with averaged data
 diff1 <- sum(bush$totals)-sum(clinton$totals)*2
 print("----DIFFERENCE BW BUSH & CLINTON----")
@@ -119,7 +115,7 @@ print("----DIFFERENCE BW BIDEN & TRUMP----")
 diff3
 ```
 
-```{r}
+```{r Plot}
 #install the following packages if not already done so
 #install.packages("tidyverse")
 #library(tidyverse)
