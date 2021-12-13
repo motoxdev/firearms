@@ -1,5 +1,9 @@
+---
+output: word_document
+---
 Devyn Holland 
 CS 510
+
 
 
 ```{r Reading Spreadsheets}
